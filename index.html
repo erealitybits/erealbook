@@ -1,46 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eRealBook3D – The Demons of the Consciousness</title>
 
-<title>eRealBook3D – The Demons of the Consciousness</title>
+  <!-- OPEN GRAPH (SOCIAL SHARE) -->
+  <meta property="og:title" content="eRealBook3D – The Demons of the Consciousness">
+  <meta property="og:description" content="Interactive Comic Experience Available on Google Play">
+  <meta property="og:type" content="website">
 
-<!-- ========================= -->
-<!-- OPEN GRAPH (SOCIAL SHARE) -->
-<!-- ========================= -->
+  <meta property="og:image" content="https://erealitybits.github.io/erealbook/socialCoverOG.jpg">
+  <meta property="og:image:secure_url" content="https://erealitybits.github.io/erealbook/socialCoverOG.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
-<meta property="og:title" content="eRealBook3D – The Demons of the Consciousness">
-<meta property="og:description" content="Interactive Comic Experience Available on Google Play">
-<meta property="og:type" content="website">
+  <!-- TWITTER / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="eRealBook3D – The Demons of the Consciousness">
+  <meta name="twitter:description" content="Interactive Comic Experience Available on Google Play">
+  <meta name="twitter:image" content="https://erealitybits.github.io/erealbook/socialCoverOG.jpg">
 
-<meta property="og:image" content="https://erealitybits.github.io/erealbook/socialCoverOG.jpg">
-<meta property="og:image:secure_url" content="https://erealitybits.github.io/erealbook/socialCoverOG.jpg">
-<meta property="og:image:type" content="image/jpeg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+  <script>
+    (function () {
+      const BASE = "https://play.google.com/apps/internaltest/4700382727885770321";
 
-<!-- TWITTER / X -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="eRealBook3D – The Demons of the Consciousness">
-<meta name="twitter:description" content="Interactive Comic Experience Available on Google Play">
-<meta name="twitter:image" content="https://erealitybits.github.io/erealbook/socialCoverOG.jpg">
+      // Read ?ref= from current URL (optional)
+      const params = new URLSearchParams(window.location.search);
+      const ref = params.get("ref");
 
-<!-- ========================= -->
-<!-- REDIRECT TO GOOGLE PLAY -->
-<!-- ========================= -->
+      // Build destination (we keep it simple for internal test link)
+      // Later, when you have the public Play Store URL, we'll pass ref properly.
+      let dest = BASE;
 
-<meta http-equiv="refresh" content="1; url=https://play.google.com/apps/internaltest/4700382727885770321">
+      // Optional: keep ref visible for analytics logs later (for now just append)
+      if (ref) {
+        // Append as query parameter to keep it (harmless for now)
+        dest = BASE + (BASE.includes("?") ? "&" : "?") + "ref=" + encodeURIComponent(ref);
+      }
 
+      // Give scrapers a tiny moment to read OG tags
+      setTimeout(() => { window.location.replace(dest); }, 800);
+    })();
+  </script>
 </head>
 
-
 <body style="background:black; color:white; font-family:Arial; text-align:center; padding-top:40px;">
-
-<p>Redirecting to Google Play...</p>
-
+  <p>Redirecting to Google Play...</p>
 </body>
-
 </html>
